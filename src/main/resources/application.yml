@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: friendship
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://friendship.cbyyc4csaf39.ap-northeast-2.rds.amazonaws.com:3306/friendship?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
