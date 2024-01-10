@@ -13,7 +13,7 @@ public class AuthController {
 
     @RequestMapping("/health_check")
     public String healthCheck() {
-        return "OK-aa";
+        return "OK-bb";
     }
 
     @RequestMapping("/hello")
