@@ -1,3 +1,5 @@
+name: tester
+
 on:
   push:
     branches: [ develop ]
