@@ -8,6 +8,7 @@ class TestRdsApplicationTests {
 
     @Test
     void contextLoads() {
+        test
     }
 
 }
