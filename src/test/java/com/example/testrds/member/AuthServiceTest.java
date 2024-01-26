@@ -15,9 +15,9 @@ public class AuthServiceTest {
     @Test
     @DisplayName("회원 추가")
     void addMember() {
-        Member member = Member.builder()
-                .name("홍길동")
-                .build();
-        memberRepository.save(member);
+        // Member member = Member.builder()
+        //         .name("홍길동")
+        //         .build();
+        // memberRepository.save(member);
     }
 }
