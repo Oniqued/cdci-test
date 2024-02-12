@@ -28,10 +28,10 @@ jobs:
       - name: PRIVATE 설정 파일(yml) 추가
         run: |
           cd ./src/main/resources
-          touch ./application-prod.yml
-          echo "${{ secrets.APPLICATION_PROD }}" | base64 --decode > ./application-prod.yml
+          touch ./application-prod.json
+          echo "${{ secrets.APPLICATION_PROD }}" | base64 --decode > ./application-prod.json
           ls -a .
-          cat ./application-prod.yml
+          cat ./application-prod.json
 
       - name: gradlew 실행 권한 허용
         run: chmod +x gradlew
