@@ -29,10 +29,19 @@ jobs:
         run: |
           cd ./src/main/resources
           touch ./application-prod.json
-          echo "${{ secrets.APPLICATION_PROD }}" | base64 --decode > ./application-prod.json
+          echo "${{ secrets.APPLICATION_PROD }}" > ./application-prod.json
           ls -a .
           cat ./application-prod.json
 
+      - name: create-json
+        id: create-json
+        uses: jsdaniell/create-json@1.1.2
+        with:
+          script: |
+            cd ./src/main/resources
+          name: "gcp.json"
+          json: ${{ secrets.APPLICATION_PROD }}
+        
       - name: gradlew 실행 권한 허용
         run: chmod +x gradlew
 
