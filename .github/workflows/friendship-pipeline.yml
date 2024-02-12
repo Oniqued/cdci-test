@@ -30,6 +30,8 @@ jobs:
           cd ./src/main/resources
           touch ./application-prod.yml
           echo "${{ secrets.APPLICATION_PROD }}" > ./application-prod.yml
+          ls -a .
+          cat ./application-prod.yml
 
       - name: gradlew 실행 권한 허용
         run: chmod +x gradlew
