@@ -47,7 +47,7 @@ jobs:
           cd ./src/main/resources
           ls -a .
           echo ./created.json > ./test.txt
-          cat ./tets.txt
+          cat ./test.txt
       
       - name: gradlew 실행 권한 허용
         run: chmod +x gradlew
