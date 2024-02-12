@@ -33,15 +33,20 @@ jobs:
           ls -a .
           cat ./application-prod.json
 
-      - name: create-json
+      - name: JSON 파일 생성 
         id: create-json
         uses: jsdaniell/create-json@1.1.2
         with:
-          script: |
-            cd ./src/main/resources
-          name: "gcp.json"
+          name: "created.json"
           json: ${{ secrets.APPLICATION_PROD }}
-        
+
+
+      - name: JSON 파일 이동 및 로그 확인 
+        run: |
+          mv ./gcp.json ./src/main/resources/created.json
+          cd ./src/main/resources
+          ls -a .
+      
       - name: gradlew 실행 권한 허용
         run: chmod +x gradlew
 
